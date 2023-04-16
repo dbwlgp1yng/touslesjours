@@ -108,6 +108,13 @@ footer .inner_wrap { display: flex; justify-content: space-between; }
     display: flex; flex-direction: column; justify-content: flex-end;
     width: 430px; height: 125px; 
 }
+.footer_nav { width: 100%; height: 25px; }
+.footer_nav li { display: inline; padding-right: 5px; }
+.footer_nav li::after {
+    content: '|';
+    position: relative; left: 5px;
+}
+.footer_nav li:last-child::after { display: none; }
 .family { width: 120px; height: 125px; }
 .cscenter { width: 120px; height: 125px; }
 .cs_number { font-size: 18px; font-weight: bold; }
