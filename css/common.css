@@ -1,0 +1,129 @@
+@charset "UTF-8";
+
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap');
+/* font-family: 'Noto Sans KR', "맑은 고딕", "Apple SD Gothic Neo", sans-serif; */
+@font-face {
+    font-family: 'Hahmlet-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/Hahmlet-Regular.woff2') format('woff2');
+    font-weight: normal; font-style: normal;
+}
+
+
+
+/* base */
+* {
+    padding: 0; margin: 0; box-sizing: border-box;
+    font-family: 'Noto Sans KR', "맑은 고딕", "Apple SD Gothic Neo", sans-serif; color: #333;
+}
+li { list-style: none; }
+a { text-decoration: none; }
+img { display: block; border: none; }
+fieldset { border: none; }
+button { cursor: pointer; border: none; background-color: transparent; } 
+p { line-height: 1.5; }
+.away { position: absolute; left: -999em; }
+
+
+
+
+
+/* inner_wrap */
+.inner_wrap { width: 1280px; height: 100%; margin: 0 auto; }
+
+
+
+
+/* header */
+header {
+    position: fixed; top: 0; left: 0; z-index: 5000;
+    width: 100%; min-width: 1280px; height: 110px; 
+    background-color: #fff;
+}
+.h_top { width: 1280px; height: 50px; padding-top: 20px; margin: 0 auto; }
+.h_top ul {
+    display: flex; justify-content: flex-end; align-items: center;
+    width: 100%; height: 100%;
+}
+.h_top li { width: 28px; height: 25px; margin-left: 10px; }
+.h_top li:last-child { margin-left: 15px; }
+.h_top a {
+    display: flex; flex-direction: column; justify-content: center; align-items: center;  width: 100%; height: 100%; transition: 0.2s;
+    background-repeat: no-repeat; background-size: cover; background-position: center; 
+}
+.h_top .search_icon a { background-image: url(../images/common/search_out.png); }
+.h_top .cart_icon a { background-image: url(../images/common/cart_out.png); }
+.h_top .panel_icon a { background-image: url(../images/common/panel_out.png); }
+.h_top .search_icon a:hover { background-image: url(../images/common/search_over.png); }
+.h_top .cart_icon a:hover { background-image: url(../images/common/cart_over.png); }
+.h_top .panel_icon a:hover { background-image: url(../images/common/panel_over.png); }
+
+
+
+/* login_icon */
+.login_icon { position: relative; }
+.login_icon a.person_icon { background-image: url(../images/common/login_out.png); }
+.login_icon a.person_icon:hover { background-image: url(../images/common/login_over.png); }
+.login_box { 
+    display: none; position: absolute; top: 30px; left: -35px;
+    width: 100px; height: 60px; text-align: center; 
+    background-color: #fff; border: 2px solid #333;
+}
+.login_box a { display: block; width: 96px; height: 28px; line-height: 28px; font-size: 14px; }
+.login_icon:hover .login_box { display: block; }
+
+
+
+
+.h_bottom {
+    display: flex; justify-content: space-between; 
+    width: 1280px; height: 60px; margin: 0 auto; padding-top: 10px;
+}
+.h_bottom h1 { position: relative; top: -20px; }
+.gnb ul { display: flex; }
+.gnb li { width: 130px; height: 50px; }
+.gnb li a { 
+    display: block; width: 100%; height: 100%; text-align: center; line-height: 47px;
+    font-family: 'Hahmlet-Regular'; font-weight: bold; font-size: 18px; 
+}
+.gnb > ul > li > a:hover { border-bottom: 3px solid #f39031; color: #f39031; }
+
+
+
+
+
+
+/* footer */
+footer {
+    width: 100%; min-width: 1280px; height: 205px; padding-top: 40px;
+    background-color: #ededed; overflow: hidden;
+}
+footer .inner_wrap { display: flex; justify-content: space-between; }
+.footer_wrap {
+    display: flex; flex-direction: column; justify-content: space-between;
+    width: 360px; height: 125px; 
+}
+.copyright, .footer_info, .family a, .cs_info { font-size: 14px; line-height: 24px; }
+.footer_info {
+    display: flex; flex-direction: column; justify-content: flex-end;
+    width: 430px; height: 125px; 
+}
+.family { width: 120px; height: 125px; }
+.cscenter { width: 120px; height: 125px; }
+.cs_number { font-size: 18px; font-weight: bold; }
+.cs_info { text-align: right; padding-right: 17px; }
+footer .title { font-size: 20px; font-weight: bold; text-transform: uppercase; }
+
+
+
+
+
+
+
+
+/* aside */
+.scroll_top {
+    position: fixed; right: calc(50% - 710px); top: 800px; z-index: 6000;
+    width: 52px; height: 52px;
+}
+.scroll_top a { display: block; width: 100%; height: 100%; }
