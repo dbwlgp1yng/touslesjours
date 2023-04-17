@@ -41,38 +41,38 @@ header {
     background-color: #fff;
 }
 .h_top { width: 1280px; height: 50px; padding-top: 20px; margin: 0 auto; }
-.h_top ul {
+.h_top > ul {
     display: flex; justify-content: flex-end; align-items: center;
     width: 100%; height: 100%;
 }
-.h_top li { width: 28px; height: 25px; margin-left: 10px; }
-.h_top li:last-child { margin-left: 15px; }
-.h_top a {
-    display: flex; flex-direction: column; justify-content: center; align-items: center;  width: 100%; height: 100%; transition: 0.2s;
-    background-repeat: no-repeat; background-size: cover; background-position: center; 
+.h_top > ul > li { width: 30px; height: 30px; margin-left: 10px; }
+.h_top > ul > li:last-child { margin-left: 15px; }
+.h_top > ul > li > a {
+    display: flex; flex-direction: column; justify-content: center; align-items: center;  width: 100%; height: 100%; 
+    background-repeat: no-repeat; background-image: url(../images/common/top_nav_sprite.png);
 }
-.h_top .search_icon a { background-image: url(../images/common/search_out.png); }
-.h_top .cart_icon a { background-image: url(../images/common/cart_out.png); }
-.h_top .panel_icon a { background-image: url(../images/common/panel_out.png); }
-.h_top .search_icon a:hover { background-image: url(../images/common/search_over.png); }
-.h_top .cart_icon a:hover { background-image: url(../images/common/cart_over.png); }
-.h_top .panel_icon a:hover { background-image: url(../images/common/panel_over.png); }
-
+.h_top .login_icon a{ background-position: -30px 0; }
+.h_top .cart_icon a{ background-position: -60px 0; }
+.h_top .panel_icon a { background-position: -90px 0; }
+.h_top .search_icon a:hover { background-position: 0 -30px; }
+.h_top .login_icon a:hover { background-position: -30px -30px; }
+.h_top .cart_icon a:hover { background-position: -60px -30px; }
+.h_top .panel_icon a:hover { background-position: -90px -30px; }
 
 
 /* login_icon */
 .login_icon { position: relative; }
-.login_icon a.person_icon { background-image: url(../images/common/login_out.png); }
-.login_icon a.person_icon:hover { background-image: url(../images/common/login_over.png); }
-.login_box { 
-    display: none; position: absolute; top: 30px; left: -35px;
+.login_active { 
+    display: none; /* 처음에 안보이게 처리 */
+    position: absolute; top: 30px; left: -35px;
     width: 100px; height: 60px; text-align: center; 
     background-color: #fff; border: 2px solid #333;
 }
-.login_box a { display: block; width: 96px; height: 28px; line-height: 28px; font-size: 14px; }
-.login_icon:hover .login_box { display: block; }
-
-
+.login_active a { 
+    display: block; width: 100%; height: 100%; line-height: 28px; font-size: 14px;
+}
+.login_active a:hover { font-weight: bold; }
+/* .person_icon:hover + div { display: block; } */
 
 
 .h_bottom {
@@ -89,7 +89,10 @@ header {
 .gnb > ul > li > a:hover { border-bottom: 3px solid #f39031; color: #f39031; }
 
 
-
+/* header scroll */
+header.active { height: 60px; transition: 0.3s; }
+header.active .h_top { display: none; }
+header.active .h_bottom h1 { position: relative; top: -5px; }
 
 
 /* footer */
