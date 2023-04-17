@@ -13,10 +13,7 @@ main {
 
 
 /* title */
-h2 { 
-    width: 1280px; height: 30px; 
-    font-family: 'Hahmlet-Regular'; font-size: 36px; font-weight: bold;
-}
+h2 { width: 1280px; height: 30px; font-family: 'Hahmlet-Regular'; font-size: 36px; font-weight: bold; }
 h3 { font-size: 24px; font-weight: bold; }
 
 
@@ -37,10 +34,7 @@ h3 { font-size: 24px; font-weight: bold; }
 /* promotion */
 .promotion { width: 100%; min-width: 1280px; height: 400px; margin-bottom: 100px; }
 .promotion ul { display: flex; width: 100%; min-width: 1280px; height: 400px; }
-.promotion li { 
-    flex: 1; height: 400px; 
-    text-align: center; 
-}
+.promotion li { flex: 1; height: 400px; text-align: center; }
 .promotion a { 
     display: flex; flex-direction: column; justify-content: center; align-items: center;  width: 100%; height: 100%; 
     background-repeat: no-repeat; background-size: cover; background-position: center; 
@@ -102,12 +96,11 @@ h3 { font-size: 24px; font-weight: bold; }
 .board_box { display: flex; justify-content: space-between; }
 .viewbtn {
     display: inline-block; width: 106px; height: 38px;
-    background-image: url(../images/main/viewmore_out_btn.png);
-    background-repeat: no-repeat;
+    background-image: url(../images/main/viewmore_out_btn.png); background-repeat: no-repeat;
     text-indent: -999em; cursor: pointer;
 }
 .viewbtn:hover { background-image: url(../images/main/viewmore_over_btn.png); }
-  
+.board_box .insta_img:hover { opacity: 0.7; transition: 0.3s; }
 
 
 
