@@ -13,13 +13,11 @@ $(document).ready(function() {
         },
         allowTouchMove: false, 
         speed: 800, 
-        loopedSlides: 1,
         pagination: {
           el: "main .swiper-pagination",
           clickable: true,
         },
         loop: true,
-        
     });
 });
 

@@ -40,31 +40,28 @@ header {
     width: 100%; min-width: 1280px; height: 110px; 
     background-color: #fff;
 }
-.h_top { 
-    display: flex; justify-content: flex-end;
-    width: 1280px; height: 50px; padding-top: 20px; margin: 0 auto; 
-}
+.h_top { width: 1280px; height: 50px; padding-top: 20px; margin: 0 auto; }
 .h_top > ul {
-    display: flex; justify-content: space-between; align-items: center;
-    width: 160px; height: 100%;
+    display: flex; justify-content: flex-end; align-items: center;
+    width: 100%; height: 100%;
 }
-.h_top > ul > li { width: 30px; height: 30px; }
-/* .h_top > ul > li:last-child { margin-left: 15px; } */
+.h_top > ul > li { width: 30px; height: 30px; margin-left: 10px; }
+.h_top > ul > li:last-child { margin-left: 15px; }
 .h_top > ul > li > a {
     display: flex; flex-direction: column; justify-content: center; align-items: center;  width: 100%; height: 100%; 
     background-repeat: no-repeat; background-image: url(../images/common/top_nav_sprite.png); 
 }
-.h_top .login_icon a{ background-position: -30px 0; }
-.h_top .cart_icon a{ background-position: -60px 0; }
+/* out */
+.h_top .login_icon a.person_icon{ background-position: -30px 0; }
+.h_top .cart_icon a { background-position: -60px 0; }
 .h_top .panel_icon a { background-position: -90px 0; }
-.h_top .search_icon a:hover { background-position: 0 -30px; }
-/* .h_top .login_icon a:hover { background-position: -30px -30px; }  */
-.h_top .cart_icon a:hover { background-position: -60px -30px; }
-.h_top .panel_icon a:hover { background-position: -90px -30px; }
-
-
-/* login_icon */
-.login_icon { position: relative; }
+/* over&focus */
+.h_top .search_icon a:hover, .h_top .search_icon a:focus { background-position: 0 -30px; }
+.h_top .login_icon:hover a.person_icon, .h_top .login_icon a.person_icon.active { background-position: -30px -30px; }
+.h_top .cart_icon a:hover, .h_top .cart_icon a:focus { background-position: -60px -30px; }
+.h_top .panel_icon a:hover, .h_top .panel_icon a:focus { background-position: -90px -30px; }
+/* login box */
+.login_icon { position: relative; z-index: 5300; }
 .login_icon .login_active { 
     display: none; /* 처음에 안보이게 처리 */
     position: absolute; top: 30px; left: -35px;
@@ -72,32 +69,53 @@ header {
     background-color: #fff; border: 2px solid #333;
 }
 .login_active a { display: block; width: 100%; height: 100%; line-height: 28px; font-size: 14px; }
-.login_active a:hover { font-weight: bold; }
-
+.login_active a:hover, .login_active a:focus { font-weight: bold; }
 
 .h_bottom {
     display: flex; justify-content: space-between; 
     width: 1280px; height: 60px; margin: 0 auto; padding-top: 10px;
 }
 .h_bottom h1 { position: relative; top: -20px; }
-.gnb ul { display: flex; }
-.gnb li { width: 130px; height: 50px; }
-.gnb li a { 
+.gnb > ul { display: flex; }
+.gnb > ul > li { position: relative; width: 130px; height: 50px; }
+.gnb .main_nav { 
     display: block; width: 100%; height: 100%; text-align: center; line-height: 47px;
-    font-family: 'Hahmlet-Regular'; font-weight: bold; font-size: 18px; 
+    font-family: 'Hahmlet-Regular'; font-weight: 700; font-size: 18px;
 }
+.gnb li:hover .main_nav { border-bottom: 3px solid #f39031; color: #f39031; }
+.gnb .main_nav.active { border-bottom: 3px solid #f39031; color: #f39031; }
 .gnb > ul > li > a:hover { border-bottom: 3px solid #f39031; color: #f39031; }
+.gnb_bg {
+    position: absolute; left: 0; top: 110px; z-index: 5100; 
+    width: 100%; height: 260px; background-color: #fff;
+    display: none;
+}
+.gnb .sub_nav {
+    position: absolute; left: 0; top: 50px; z-index: 5200;
+    width: 100%; height: 260px; padding: 10px 0; 
+    display: none;
+}
+.gnb .sub_nav li { width: 100%; height: 32px; line-height: 32px; text-align: center; }
+.gnb .sub_nav a { font-family: 'Hahmlet-Regular'; font-size: 14px; font-weight: 700; }
+.gnb .sub_nav a:hover, .gnb .sub_nav a:focus { color: #f39031; font-weight: 700; transition: 0.2s; }
+
+
 
 
 /* header scroll */
 header.active { height: 60px; transition: 0.3s; }
 header.active .h_top { display: none; }
 header.active .h_bottom h1 { position: relative; top: -5px; }
+header.active .gnb_bg { top: 60px; }
+header.active .sub_nav { top: 50px; } 
+/* header.active + main { padding-top: 60px; transition: 0.3s; } */
+
+
 
 
 /* footer */
 footer {
-    position: relative; z-index: 5000;
+    position: relative;
     width: 100%; min-width: 1280px; height: 205px; padding-top: 40px;
     background-color: #ededed; 
 }
@@ -133,9 +151,9 @@ footer .title { font-size: 20px; font-weight: bold; text-transform: uppercase; }
 
 /* aside */
 .scroll_top {
+    position: fixed; right: calc(50% - 750px); z-index: 6000;
+    width: 52px; height: 52px; bottom: 50px;
     display: none; 
-    position: fixed; right: calc(50% - 740px); z-index: 6000;
-    width: 52px; height: 52px; bottom: 100px;
 }
 .scroll_top a { 
     display: block; width: 100%; height: 100%; 
@@ -143,12 +161,5 @@ footer .title { font-size: 20px; font-weight: bold; text-transform: uppercase; }
     background-image: url(../images/common/scrolltop_sprite.png);
     transition: background-color 0.4s ease-in;
 }
-.scroll_top a:hover {
-    background-color: #f39031; border-radius: 50%;
-    background-position: 50px 0;
-}
-
-/* scroll_top active */
-.scroll_top.active{
-    position: absolute; bottom: 230px; 
-}  
+.scroll_top a:hover { background-color: #f39031; border-radius: 50%; background-position: 50px 0; }
+.scroll_top.active { position: absolute; bottom: 230px; }

@@ -115,25 +115,27 @@ h3 { font-size: 24px; font-weight: bold; }
 .sns_icon ul { display: flex; }
 .sns_icon li { margin-left: 20px; }
 .notice, .event_result { 
-    width: 290px; height: 400px; padding: 50px 30px 30px; 
+    position: relative; width: 290px; height: 400px; padding: 50px 30px 30px; 
     border: 1px solid #82cff5;
 }
 .board_box h3 { 
     width: 230px; height: 40px; border-bottom: 2px solid #82cff5;
 }
-.board_box p { margin: 58px 0 40px; font-size: 18px; }
+.board_box p { margin: 58px 0 30px; font-size: 18px; }
 .board_box .bold_wrap { font-weight: bold; }
 .board_box { display: flex; justify-content: space-between; }
 
 .viewbtn {
-    display: inline-block; width: 106px; height: 38px;
-    background-image: url(../images/main/viewmore_out_btn.png);
-    background-repeat: no-repeat;
-    text-indent: -999em; cursor: pointer;
+    display: block; width: 106px; height: 38px; line-height: 34px;
+    border: 1px solid #82cff5; border-radius: 30px; color: #82cff5; text-align: center; font-size: 14px; font-weight: 500; background-color: #fff; transition: 0.2s ease-in;
 }
-.viewbtn:hover { background-image: url(../images/main/viewmore_over_btn.png); }
-
-
+.viewbtn:hover { background-color: #82cff5; color: #fff; }
+.arrow { 
+    position: absolute; right: 30px; bottom: 30px;
+    display: block; width: 70px; height: 30px; 
+    background-image: url(../images/main/board_arrow.png); background-repeat: no-repeat;  background-position: right bottom; font-size: 14px; 
+}
+.arrow:hover { right: 40px; transition: 0.3s ease-in; }
 
 
 
