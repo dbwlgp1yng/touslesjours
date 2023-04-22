@@ -24,6 +24,7 @@ $(document).ready(function() {
             delay: 5000,
             disableOnInteraction: false,
         },
+        
         navigation: {
             nextEl: "main .swiper-button-next",
             prevEl: "main .swiper-button-prev",
@@ -41,21 +42,10 @@ $(document).ready(function() {
 // menu
 $(document).ready(function() {
     var swiper = new Swiper(".menu .swiper", {
-        speed: 900,
+        speed: 1000,
         loop: true,
         slidesPerView: 4,
         spaceBetween: 40,
-        centeredSlides: false,
-        grabCursor: true,
-        keyboard: {
-        enabled: true,
-        },
-        breakpoints: {
-        769: {
-            slidesPerView: 4,
-            slidesPerGroup: 4,
-        },
-        },
         scrollbar: {
             el: ".menu .swiper-scrollbar",
             hide: true,
@@ -63,7 +53,12 @@ $(document).ready(function() {
         navigation: {
             nextEl: ".menu .swiper-button-next",
             prevEl: ".menu .swiper-button-prev",
-          },
+        },
+        autoplay: {
+            delay: 2000,
+            disableOnInteraction: false,
+        },
+
     });
 });
 
