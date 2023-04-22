@@ -65,6 +65,7 @@ $(document).ready(function() {
         $(sub).add(sub_bg).stop().slideDown();
     }, function() {
         $(sub).add(sub_bg).stop().slideUp();
+        $(main).removeClass('active');
     });
 
     $(main).first().focus(function() {

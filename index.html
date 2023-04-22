@@ -13,6 +13,7 @@
         <link rel="apple-touch-icon" href="images/common/favicon_ios.png" sizes="180x180">
         <link rel="icon" href="images/common/favicon_android.png" sizes="192x192">
         <script src="js/jquery-3.6.4.min.js"></script>
+        <script src="https://www.youtube.com/iframe_api"></script>
         <script src="js/swiper-bundle.min.js"></script>
         <script src="js/jquery.easing.1.3.js"></script>
         <script src="js/common.js"></script>
@@ -26,8 +27,8 @@
                     <li class="login_icon">
                         <a href="#" class="person_icon"></a>
                         <ul class="login_active">
-                            <li><a href="login/login.html">로그인</a></li>
-                            <li><a href="login/join.html">회원가입</a></li>
+                            <li><a href="#">로그인</a></li>
+                            <li><a href="#">회원가입</a></li>
                         </ul>
                     </li>
                     <li class="cart_icon"><a href="#"></a></li>
@@ -114,16 +115,122 @@
         </main>
         <section class="menu">
             <h2>TOUS les JOURS&#39;s MENU</h2>
-            <div class="slider">
-                <ul>
-                    <li><img src="images/main/menu01.png" alt="소금빵"></li>
-                    <li><img src="images/main/menu02.png" alt="순진 우유크림 빵"></li>
-                    <li><img src="images/main/menu03.png" alt="착한빵식 통밀빵"></li>
-                    <li><img src="images/main/menu04.png" alt="겹겹이 딸기파이"></li>
-                </ul>
-                <a href="#" class="prev_btn"><img src="" alt="이전버튼"></a>
-                <a href="#" class="next_btn"><img src="" alt="다음버튼"></a>
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <figure>
+                            <a href="#">
+                                <img src="images/main/menu01.png" alt="소금버터롤">
+                                <span class="more_btn">더보기</span>
+                            </a>
+                            <figcaption>소금버터롤</figcaption>
+                        </figure>
+                        
+                    </div>
+                    <div class="swiper-slide">
+                        <figure>
+                            <a href="#">
+                                <img src="images/main/menu02.png" alt="순진우유크림빵">
+                                <span class="more_btn">더보기</span>
+                            </a>
+                            <figcaption>순진 우유크림 빵</figcaption>
+                        </figure>
+                    </div>
+                    <div class="swiper-slide">
+                        <figure>
+                            <a href="#">
+                                <img src="images/main/menu03.png" alt="착한빵식 통밀식빵">
+                                <span class="more_btn">더보기</span>
+                            </a>
+                            <figcaption>착한빵식 통밀식빵</figcaption>
+                        </figure>
+                    </div>
+                    <div class="swiper-slide">
+                        <figure>
+                            <a href="#">
+                                <img src="images/main/menu04.png" alt="겹겹이 딸기파이">
+                                <span class="more_btn">더보기</span>
+                            </a>
+                            <figcaption>겹겹이 딸기파이</figcaption>
+                        </figure>
+                    </div>
+                    <div class="swiper-slide">
+                        <figure>
+                            <a href="#">
+                                <img src="images/main/menu05.png" alt="초크 청크 파운드">
+                                <span class="more_btn">더보기</span>
+                            </a>
+                            <figcaption>초크 청크 파운드</figcaption>
+                        </figure>
+                    </div>
+                    <div class="swiper-slide">
+                        <figure>
+                            <a href="#">
+                                <img src="images/main/menu06.png" alt="소보로 쑥 파운드">
+                                <span class="more_btn">더보기</span>
+                            </a>
+                            <figcaption>소보로 쑥 파운드</figcaption>
+                        </figure>
+                    </div>
+                    <div class="swiper-slide">
+                        <figure>
+                            <a href="#">
+                                <img src="images/main/menu07.png" alt="순진 크림치즈 빵">
+                                <span class="more_btn">더보기</span>
+                            </a>
+                            <figcaption>순진 크림치즈 빵</figcaption>
+                        </figure>
+                    </div>
+                    <div class="swiper-slide">
+                        <figure>
+                            <a href="#">
+                                <img src="images/main/menu08.png" alt="씨앗가득 고소함이 찰떡">
+                                <span class="more_btn">더보기</span>
+                            </a>
+                            <figcaption>씨앗가득 고소함이 찰떡</figcaption>
+                        </figure>
+                    </div>
+                    <div class="swiper-slide">
+                        <figure>
+                            <a href="#">
+                                <img src="images/main/menu09.png" alt="복이가득 앙!크림단팥">
+                                <span class="more_btn">더보기</span>
+                            </a>
+                            <figcaption>복이가득 앙!크림단팥</figcaption>
+                        </figure>
+                    </div>
+                    <div class="swiper-slide">
+                        <figure>
+                            <a href="#">
+                                <img src="images/main/menu10.png" alt="미니 호두파이">
+                                <span class="more_btn">더보기</span>
+                            </a>
+                            <figcaption>미니 호두파이</figcaption>
+                        </figure>
+                    </div>
+                    <div class="swiper-slide">
+                        <figure>
+                            <a href="#">
+                                <img src="images/main/menu11.png" alt="블루베리 스콘">
+                                <span class="more_btn">더보기</span>
+                            </a>
+                            <figcaption>블루베리 스콘</figcaption>
+                        </figure>
+                    </div>
+                    <div class="swiper-slide">
+                        <figure>
+                            <a href="#">
+                                <img src="images/main/menu12.png" alt="72겹 정성 데니쉬식빵">
+                                <span class="more_btn">더보기</span>
+                            </a>
+                            <figcaption>72겹 정성 데니쉬식빵</figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <div class="swiper-scrollbar"></div>                
             </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
         </section>
         <div class="promotion">
             <ul>
@@ -175,7 +282,7 @@
                     <a href="#" class="viewbtn" title="더보기">view more</a>
                     <a href="#" class="arrow" title="당첨자발표 목록">목록</a>
                 </div>
-                <a href="#" title="인스타그램바로가기"><img src="images/main/sns_image.png" alt="인스타그램이동이미지"></a>
+                <a href="#" title="인스타그램바로가기" class="insta_img"><img src="images/main/sns_image.png" alt="인스타그램이동이미지"></a>
             </div>
         </section>
         <div class="affiliation">
@@ -191,7 +298,7 @@
             </div>
         </div>
         <div class="cream_video">
-            <iframe width="1280" height="720" src="https://www.youtube.com/embed/RoBwK2eNDX8?autoplay=0&mute=1&loop=1&playlist=RoBwK2eNDX8" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share " allowfullscreen></iframe>
+            <iframe width="1280" height="720" id="youtube_video" class="movie" src="https://www.youtube.com/embed/RoBwK2eNDX8?version=3&enablejsapi=1" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share " allowfullscreen></iframe>
         </div>
         <footer>
             <div class="inner_wrap">
