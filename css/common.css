@@ -50,10 +50,22 @@ header {
 .h_top .cart_icon a { background-position: -60px 0; }
 .h_top .panel_icon a { background-position: -90px 0; }
 /* over&focus */
-.h_top .search_icon a:hover, .h_top .search_icon a:focus { background-position: 0 -30px; }
+.h_top .search_icon a:hover, .h_top .search_icon a:focus, .h_top .search_icon a.search_btn.active { background-position: 0 -30px; }
 .h_top .login_icon:hover a.person_icon, .h_top .login_icon a.person_icon.active { background-position: -30px -30px; }
 .h_top .cart_icon a:hover, .h_top .cart_icon a:focus { background-position: -60px -30px; }
 .h_top .panel_icon a:hover, .h_top .panel_icon a:focus { background-position: -90px -30px; }
+
+/* search box */
+.search_area {
+    display: none; 
+    position: relative; top: -30px; right: 20px;
+    width: 200px; height: 30px; transform: translateX(-100%);
+    border: 1px solid #333; border-radius: 20px; padding-left: 10px;
+}
+.search_area input { 
+    width: 100%; height: 100%; 
+    background-color: transparent; border: none;
+}
 /* login box */
 .login_icon { position: relative; z-index: 5300; }
 .login_icon .login_active { 

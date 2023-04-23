@@ -12,8 +12,19 @@ $(document).ready(function() {
     $(window).trigger('scroll');
 });
 
+//search_icon 
+$(document).ready(function() {
+    var search = '.h_top .search_icon';
+    var btn = '.h_top .search_btn';
+    var speed = 'fast';
 
-// login_icon click event
+    $(btn).click(function() {
+        $(this).next().stop().animate({width: "toggle"}, speed);
+        $(this).toggleClass('active');
+    });
+});
+
+// login_icon 
 $(document).ready(function() {
     var dropMenu = '.login_icon';
     var active = '.login_active';
@@ -49,7 +60,6 @@ $(document).ready(function() {
         }
     });
 });
-
 
 // gnb
 $(document).ready(function() {
@@ -101,8 +111,7 @@ $(document).ready(function() {
     });
 });
 
-
-// scroll_top event
+// scroll_top 
 $(document).ready(function(){
     var scrollBtn = '.scroll_top a';
     var speed = 1700;
