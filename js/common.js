@@ -20,10 +20,8 @@ $(document).ready(function() {
 
     $(btn).click(function() {
         $(this).next().stop().animate({width: "toggle"}, speed);
-        $(this).addClass('active');
-
+        $(this).toggleClass('active');
     });
-    
 });
 
 // login_icon 
@@ -141,7 +139,7 @@ $(document).ready(function(){
             e.preventDefault();
             $('html, body').stop().animate({
                 scrollTop : 0
-        },speed);
+            },speed);
         });
     });
   });
