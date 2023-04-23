@@ -50,7 +50,7 @@ header {
 .h_top .cart_icon a { background-position: -60px 0; }
 .h_top .panel_icon a { background-position: -90px 0; }
 /* over&focus */
-.h_top .search_icon a:hover, .h_top .search_icon a:focus, .h_top .search_icon a.search_btn.active { background-position: 0 -30px; }
+.search_icon a:hover, .search_icon a:focus, .search_icon a.search_btn.active { background-position: 0 -30px; }
 .h_top .login_icon:hover a.person_icon, .h_top .login_icon a.person_icon.active { background-position: -30px -30px; }
 .h_top .cart_icon a:hover, .h_top .cart_icon a:focus { background-position: -60px -30px; }
 .h_top .panel_icon a:hover, .h_top .panel_icon a:focus { background-position: -90px -30px; }

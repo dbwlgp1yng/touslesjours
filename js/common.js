@@ -20,8 +20,10 @@ $(document).ready(function() {
 
     $(btn).click(function() {
         $(this).next().stop().animate({width: "toggle"}, speed);
-        $(this).toggleClass('active');
+        $(this).addClass('active');
+
     });
+    
 });
 
 // login_icon 
