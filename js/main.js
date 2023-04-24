@@ -1,5 +1,40 @@
+// popup
+$(document).ready(function() {
+    function setCookie(name, value, expire) {
+        var today = new Date();
+
+        today.setDate(today.getDate() + expire);
+        document.cookie = name + '=' + value + '; path=/; expires=' + today.toGMTString() + ';';    
+    }
+    var popup = '.popup';
+
+    $(popup).find('a.today_close').click(function(e){
+        e.preventDefault(); 
+        setCookie('exCookie','yes',1); 
+        $(popup).stop().fadeOut(0); 
+        $('body').css('overflow', 'visible');
+    });
+
+    $(popup).find('a.close').click(function(e) {
+        e.preventDefault(); 
+        $(popup).stop().fadeOut(0); 
+        $('body').css('overflow', 'visible');
+    });
+    
+    var cookieData = document.cookie;
+
+    if(cookieData.indexOf('exCookie=yes') < 0) { 
+        $(popup).fadeIn(0); //팝업 보임
+        $('body').css('overflow', 'hidden');
+    }else { 
+        $(popup).fadeOut(0);
+        $('body').css('overflow', 'visible');
+    }
+
+});
+
 // title scroll
-$(function() {
+$(document).ready(function() {
     $(window).scroll(function() {
         var sTop = $(this).scrollTop(); 
         
@@ -44,7 +79,6 @@ $(document).ready(function() {
 $(document).ready(function() {
     var swiper = new Swiper(".menu .swiper", {
         speed: 1000,
-        loop: true,
         slidesPerView: 4,
         spaceBetween: 40,
         scrollbar: {

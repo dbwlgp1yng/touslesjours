@@ -14,13 +14,22 @@ $(document).ready(function() {
 
 //search_icon 
 $(document).ready(function() {
-    var search = '.h_top .search_icon';
+    var search = '.h_top .search_area';
     var btn = '.h_top .search_btn';
     var speed = 'fast';
 
     $(btn).click(function() {
         $(this).next().stop().animate({width: "toggle"}, speed);
         $(this).toggleClass('active');
+    });
+    $(search).find('input').blur(function() {
+        $(this).stop().animate({width: "toggle"}, speed);
+        $(this).prev().removeClass('active');
+    });
+
+    // submit : 데이터 전송 방지
+    $(search).submit(function(e) {
+        e.preventDefault(); 
     });
 });
 
@@ -58,6 +67,23 @@ $(document).ready(function() {
                 $(dropMenu).find(active).stop().slideUp(speed);
             }
         }
+    });
+});
+
+// sitemap colorbox
+$(document).ready(function() {
+    $('.h_top .sitemap').colorbox({
+        iframe: true, 
+        width: 1020,
+        height: 440,
+        title: false, 
+        onOpen: function(){ 
+			$('body').css('overflow','hidden');
+		},
+		onClosed: function(){ 
+			$('body').css('overflow','visible');
+            $('header h1 a').focus();
+		} 
     });
 });
 
