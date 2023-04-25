@@ -41,7 +41,7 @@ $(document).ready(function() {
         $('body > section').each(function(index) {
             var top = $(this).find('h2').offset().top; 
 
-            if(sTop > top - 900) {
+            if(sTop > top - 800) {
                 $(this).find('h2').addClass('active');
             } 
         });

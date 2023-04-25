@@ -163,9 +163,10 @@ main .swiper-slide-active { opacity: 1; }
     display: flex; justify-content: space-between; width: 100%; height: 80px; 
 }
 .board_wrap h2 { 
-    position: relative; top: -10px;
+    position: relative; top: -10px; left: 200px;
     width: 510px; height: 100%; 
 }
+.board_wrap h2.active { left: 0; }
 .board_wrap h2::after { 
     content: '';
     position: absolute; top: 27px; left: 480px; width: 600px; 

@@ -9,7 +9,6 @@
     font-weight: normal; font-style: normal;
 }
 
-
 /* base */
 * {
     padding: 0; margin: 0; box-sizing: border-box;
@@ -22,7 +21,6 @@ fieldset { border: none; }
 button { cursor: pointer; border: none; background-color: transparent; } 
 p { line-height: 1.5; }
 .away { position: absolute; left: -999em; }
-
 
 /* inner_wrap */
 .inner_wrap { width: 1280px; height: 100%; margin: 0 auto; }
@@ -71,7 +69,6 @@ header {
     display: none;
     position: absolute; top: 0; right: 0;
     width: 200px; height: 30px; 
-    /* transform: translateX(-100%); */
     border: 1px solid #333; border-radius: 20px; padding: 0 10px;
     background-color: transparent; 
 }
@@ -122,16 +119,12 @@ header {
 .gnb .sub_nav a { font-family: 'Hahmlet-Regular'; font-size: 14px; font-weight: 700; }
 .gnb .sub_nav a:hover, .gnb .sub_nav a:focus { color: #f39031; font-weight: 700; transition: 0.2s; }
 
-
 /* header scroll */
 header.active { height: 60px; transition: 0.3s; border-bottom: 1px solid #ccc; }
 header.active .h_top { display: none; }
 header.active .h_bottom h1 { position: relative; top: -5px; }
 header.active .gnb_bg { top: 60px; }
 header.active .sub_nav { top: 50px; } 
-/* header.active + main { padding-top: 60px; transition: 0.3s; } */
-
-
 
 /* footer */
 footer {
@@ -161,13 +154,6 @@ footer .inner_wrap { display: flex; justify-content: space-between; }
 .cs_number { font-size: 18px; font-weight: bold; }
 .cs_info { text-align: right; padding-right: 17px; }
 footer .title { font-size: 20px; font-weight: bold; text-transform: uppercase; }
-
-
-
-
-
-
-
 
 /* aside */
 .scroll_top {
